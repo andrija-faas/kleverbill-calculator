@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "Kleverbill — Revenue Recovery Calculator",
+    "description": "Find out how much money unpaid invoices are costing your business every month, and how much Kleverbill can recover.",
+    "ogTitle": "Kleverbill Revenue Recovery Calculator",
+    "ogDescription": "Most companies underestimate their invoice losses by 2–3x."
+  },
+  "nav": {
+    "brand": "Calculator",
+    "bookAudit": "Book a Free Recovery Audit"
+  },
+  "calculatorForm": {
+    "eyebrow": "Revenue Recovery Calculator",
+    "headlinePre": "How much money are unpaid invoices",
+    "headlineStrong": "costing you?",
+    "subline1": "Most companies underestimate this by 2–3x.",
+    "subline2": "We built a free calculator to show your real loss.",
+    "errorStep1": "Please complete Step 1 before continuing.",
+    "errorStep2": "Please complete Step 2 before continuing.",
+    "calculateNow": "Calculate now"
+  },
+  "stepRevenue": {
+    "title": "What is your monthly invoice volume?",
+    "invoicesPerMonth": "Invoices per month",
+    "avgInvoiceValue": "Average invoice value",
+    "latePaymentRate": "Late payment rate",
+    "latePaymentRateHint": "Unpaid before the first payment reminder",
+    "unpaidRate": "Unpaid rate",
+    "unpaidRateHint": "Unpaid after sending the last reminder"
+  },
+  "stepChasing": {
+    "title": "How much time does your team spend chasing payments?",
+    "modeTotal": "Total hours / month",
+    "modePerInvoice": "Hours per invoice",
+    "labelTotalHours": "Hours spent chasing per month",
+    "hintTotalHours": "How much time a member of your team spends sending reminders and chasing payments",
+    "labelPerInvoiceHours": "Hours spent chasing per invoice",
+    "hintPerInvoiceHours": "How much time is spent chasing per invoice",
+    "labelHic": "Hourly internal cost",
+    "hintHic": "How much one hour of your worker's labour costs",
+    "labelTeamMembers": "Team members",
+    "hintTeamMembers": "Number of staff members chasing payments"
+  },
+  "livePreview": {
+    "header": "Maker's Note",
+    "p1": "The figures shown in this calculator are illustrative only and are not intended to represent accurate financial projections.",
+    "p2": "The calculations use simplified models and industry-average assumptions to give a general sense of scale. Actual results will vary based on your specific business, customers, circumstances as well as the accuracy of your input data.",
+    "p3": "This is not a contact collection tool — all users see their results completely anonymously and free."
+  },
+  "stepScenario": {
+    "title": "Choose your recovery scenario",
+    "standard": {
+      "label": "Standard",
+      "description": "Default scenario for most businesses"
+    },
+    "conservative": {
+      "label": "Conservative",
+      "description": "Cautious estimate for complex receivables"
+    },
+    "aggressive": {
+      "label": "Aggressive",
+      "description": "High-volume, streamlined collections"
+    }
+  },
+  "resultsHero": {
+    "eyebrow": "Your recovery report",
+    "headlinePre": "You may be losing",
+    "headlinePost": "to late and unpaid invoices",
+    "subtitle": "Adjust the sliders below to explore different scenarios.",
+    "recoveredRevenue": "Recovered revenue",
+    "recoveredRevenueDesc": "estimated monthly recovery with Kleverbill",
+    "delayedLabel": "Delayed every month",
+    "delayedDesc": "money held up because of late payers",
+    "atRiskLabel": "At risk of non-payment",
+    "atRiskDesc": "money at risk after dunning",
+    "chasingLabel": "Spent on manual chasing",
+    "chasingDesc": "labour cost of your team spent collecting late payments",
+    "monthlyExposure": "Monthly exposure",
+    "monthlyExposureDesc": "estimated monthly receivables lost",
+    "labourSavingsLabel": "Manual effort savings",
+    "recovery": "Recovery",
+    "labourSavings": "Labour savings",
+    "chasingEffortDesc": "automation reduces manual chasing effort"
+  },
+  "kleverbillEstimate": {
+    "eyebrow": "Kleverbill estimate",
+    "title": "With Kleverbill, you could potentially:",
+    "tile0verb": "Recover",
+    "tile0desc": "monthly in at-risk revenue",
+    "tile1verb": "Save",
+    "tile1desc": "monthly in manual effort",
+    "tile2verb": "Improve cash flow by",
+    "tile2desc": "monthly"
+  },
+  "scenarioExplorer": {
+    "eyebrow": "Scenario explorer",
+    "title": "Adjust your assumptions",
+    "liveUpdate": "Outputs update live",
+    "lprLabel": "Late payment rate",
+    "lprSublabel": "% of invoices paid late",
+    "urLabel": "Unpaid rate",
+    "urSublabel": "% of invoices never paid",
+    "showMore": "Show more parameters",
+    "showLess": "Show fewer parameters",
+    "hscLabel": "Chasing hours / month",
+    "hscSublabel": "Total hours spent chasing payments",
+    "hicLabel": "Hourly internal cost",
+    "hicSublabel": "Cost per hour of staff time",
+    "tmLabel": "Team members",
+    "tmSublabel": "Number of staff members chasing payments",
+    "krrLabel": "Recovery scenario",
+    "krrSublabel": "See how efficient Kleverbill would need to be to pay for itself",
+    "exposureBreakdown": "Exposure breakdown",
+    "revenueAtRisk": "Revenue at risk",
+    "labourCost": "Labour cost",
+    "delayCost": "Delay cost",
+    "totalExposure": "Total exposure"
+  },
+  "pricingAnchor": {
+    "label": "On {tier} ({priceLabel}), that's an estimated:",
+    "roi": "monthly ROI",
+    "description": "For every euro you spend on Kleverbill, you recover this many euros in unpaid invoices, saved labour, and accelerated cash flow."
+  },
+  "planRecommendation": {
+    "recommended": "{tier} plan recommended",
+    "seeDetails": "See details",
+    "getStarted": "Get started",
+    "contactSales": "Contact sales",
+    "seeFullDetails": "See full plan details"
+  },
+  "ctaSection": {
+    "eyebrow": "Ready to recover your revenue?",
+    "headlinePre": "Stop leaving money",
+    "headlineStrong": "on the table",
+    "body": "We'll show you where your current process is leaking revenue, what can be automated, and which plan fits your invoice volume.",
+    "bookAudit": "Book your free recovery audit",
+    "recalculate": "Recalculate with different numbers"
+  },
+  "resultsDisclaimer": "Estimates are based on the information you provided and industry assumptions. Your actual recovery potential depends on invoice quality, customer payment behavior, and workflow setup.",
+  "plans": {
+    "Silver": {
+      "description": "A great starting point for lower-volume businesses.",
+      "priceLabel": "€39/month",
+      "features": [
+        "Up to 25 invoices/month",
+        "PDF Export & Email Dispatch",
+        "Document Upload & Internal Notes",
+        "Basic Dunning Automation",
+        "Payment Monitoring",
+        "Email Support"
+      ]
+    },
+    "Gold": {
+      "description": "Ideal for growing companies with regular invoice volume.",
+      "priceLabel": "€199/month",
+      "features": [
+        "Up to 250 invoices/month",
+        "Everything in Silver",
+        "API & SMTP Integration",
+        "White-Label Reminders & Templates",
+        "CSV Import & Banking Interface",
+        "Customized Reminder Levels & Workflows",
+        "Phone and Email Support"
+      ]
+    },
+    "Platinum": {
+      "description": "Your volume, revenue, or unpaid rate puts you in our highest tier.",
+      "priceLabel": "€449/month",
+      "features": [
+        "Up to 1,000 invoices/month",
+        "Everything in Gold",
+        "Automated Payment Reminders & Pauses",
+        "ERP/CRM Integration & Data Export",
+        "CSV Import/Export & Banking Interface",
+        "Personal Account Manager",
+        "Optional Back-Office Service"
+      ]
+    },
+    "Enterprise": {
+      "description": "Your scale suggests a custom setup — multi-entity, high volume, or complex collections workflow.",
+      "priceLabel": "Custom pricing",
+      "features": [
+        "Unlimited Invoices",
+        "PDF Export & Email Delivery",
+        "Tailored Workflows",
+        "Dedicated server & interface for debt collection",
+        "Personal Support & Consulting",
+        "Premium Support",
+        "Optional Back-Office Service"
+      ]
+    }
+  },
+  "validation": {
+    "monthlyRevenue": {
+      "required": "Monthly revenue is required",
+      "positive": "Must be a positive number"
+    },
+    "invoiceCount": {
+      "required": "Invoice count is required",
+      "positive": "Must be a positive number"
+    },
+    "avgInvoiceValue": {
+      "required": "Average invoice value is required",
+      "positive": "Must be a positive number"
+    },
+    "chasingHours": {
+      "required": "Chasing hours are required",
+      "nonNegative": "Cannot be negative"
+    },
+    "chasingHoursPerInvoice": {
+      "required": "Hours per invoice is required",
+      "nonNegative": "Cannot be negative"
+    },
+    "invoiceCountMode": {
+      "required": "Invoice count is required for this mode"
+    }
+  }
+}

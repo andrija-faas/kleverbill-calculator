@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "Kleverbill — Umsatz-Wiederherstellungsrechner",
+    "description": "Erfahren Sie, wie viel unbezahlte Rechnungen Ihr Unternehmen jeden Monat kosten und wie viel Kleverbill zurückgewinnen kann.",
+    "ogTitle": "Kleverbill Umsatz-Wiederherstellungsrechner",
+    "ogDescription": "Die meisten Unternehmen unterschätzen ihre Rechnungsverluste um das 2–3-Fache."
+  },
+  "nav": {
+    "brand": "Rechner",
+    "bookAudit": "Kostenloses Recovery-Audit buchen"
+  },
+  "calculatorForm": {
+    "eyebrow": "Umsatz-Wiederherstellungsrechner",
+    "headlinePre": "Wie viel kosten unbezahlte Rechnungen",
+    "headlineStrong": "Ihr Unternehmen wirklich?",
+    "subline1": "Die meisten Unternehmen unterschätzen das um das 2–3-Fache.",
+    "subline2": "Wir haben einen kostenlosen Rechner entwickelt, um Ihren echten Verlust zu zeigen.",
+    "errorStep1": "Bitte vervollständigen Sie Schritt 1, bevor Sie fortfahren.",
+    "errorStep2": "Bitte vervollständigen Sie Schritt 2, bevor Sie fortfahren.",
+    "calculateNow": "Jetzt berechnen"
+  },
+  "stepRevenue": {
+    "title": "Wie hoch ist Ihr monatliches Rechnungsvolumen?",
+    "invoicesPerMonth": "Rechnungen pro Monat",
+    "avgInvoiceValue": "Durchschnittlicher Rechnungswert",
+    "latePaymentRate": "Zahlungsverzugsrate",
+    "latePaymentRateHint": "Unbezahlt vor der ersten Zahlungserinnerung",
+    "unpaidRate": "Ausfallrate",
+    "unpaidRateHint": "Unbezahlt nach der letzten Mahnung"
+  },
+  "stepChasing": {
+    "title": "Wie viel Zeit verbringt Ihr Team mit dem Eintreiben von Zahlungen?",
+    "modeTotal": "Gesamtstunden / Monat",
+    "modePerInvoice": "Stunden pro Rechnung",
+    "labelTotalHours": "Stunden für das Eintreiben pro Monat",
+    "hintTotalHours": "Wie viel Zeit ein Teammitglied mit dem Senden von Mahnungen und dem Eintreiben von Zahlungen verbringt",
+    "labelPerInvoiceHours": "Stunden für das Eintreiben pro Rechnung",
+    "hintPerInvoiceHours": "Wie viel Zeit pro Rechnung für das Eintreiben aufgewendet wird",
+    "labelHic": "Interner Stundensatz",
+    "hintHic": "Was eine Stunde Arbeitszeit Ihres Mitarbeiters kostet",
+    "labelTeamMembers": "Teammitglieder",
+    "hintTeamMembers": "Anzahl der Mitarbeiter, die Zahlungen eintreiben"
+  },
+  "livePreview": {
+    "header": "Hinweis des Erstellers",
+    "p1": "Die in diesem Rechner angezeigten Zahlen dienen nur zur Veranschaulichung und sollen keine genauen Finanzprognosen darstellen.",
+    "p2": "Die Berechnungen verwenden vereinfachte Modelle und branchendurchschnittliche Annahmen, um ein allgemeines Größengefühl zu vermitteln. Die tatsächlichen Ergebnisse können je nach Ihrem spezifischen Unternehmen, Ihren Kunden, Ihren Umständen und der Genauigkeit Ihrer Eingabedaten variieren.",
+    "p3": "Dies ist kein Datenspeicherungstool – alle Nutzer sehen ihre Ergebnisse vollständig anonym und kostenlos."
+  },
+  "stepScenario": {
+    "title": "Wählen Sie Ihr Wiederherstellungsszenario",
+    "standard": {
+      "label": "Standard",
+      "description": "Standardszenario für die meisten Unternehmen"
+    },
+    "conservative": {
+      "label": "Konservativ",
+      "description": "Vorsichtige Schätzung für komplexe Forderungen"
+    },
+    "aggressive": {
+      "label": "Aggressiv",
+      "description": "Hohes Volumen, optimiertes Inkasso"
+    }
+  },
+  "resultsHero": {
+    "eyebrow": "Ihr Wiederherstellungsbericht",
+    "headlinePre": "Sie verlieren möglicherweise",
+    "headlinePost": "durch verspätete und unbezahlte Rechnungen",
+    "subtitle": "Passen Sie die Schieberegler unten an, um verschiedene Szenarien zu erkunden.",
+    "recoveredRevenue": "Zurückgewonnener Umsatz",
+    "recoveredRevenueDesc": "geschätzte monatliche Wiederherstellung mit Kleverbill",
+    "delayedLabel": "Monatlich verzögert",
+    "delayedDesc": "Geld, das durch säumige Zahler gebunden ist",
+    "atRiskLabel": "Von Nichtzahlung bedroht",
+    "atRiskDesc": "Gefährdetes Geld nach dem Mahnverfahren",
+    "chasingLabel": "Für manuelles Eintreiben ausgegeben",
+    "chasingDesc": "Arbeitskosten Ihres Teams für das Eintreiben",
+    "monthlyExposure": "Monatliche Exposition",
+    "monthlyExposureDesc": "geschätzte monatliche Forderungsausfälle",
+    "labourSavingsLabel": "Einsparungen beim manuellen Aufwand",
+    "recovery": "Wiederherstellung",
+    "labourSavings": "Arbeitseinsparungen",
+    "chasingEffortDesc": "Automatisierung reduziert manuellen Einholaufwand"
+  },
+  "kleverbillEstimate": {
+    "eyebrow": "Kleverbill-Schätzung",
+    "title": "Mit Kleverbill könnten Sie potenziell:",
+    "tile0verb": "Zurückgewinnen",
+    "tile0desc": "monatlich bei gefährdetem Umsatz",
+    "tile1verb": "Sparen",
+    "tile1desc": "monatlich bei manuellem Aufwand",
+    "tile2verb": "Cashflow verbessern um",
+    "tile2desc": "monatlich"
+  },
+  "scenarioExplorer": {
+    "eyebrow": "Szenario-Explorer",
+    "title": "Passen Sie Ihre Annahmen an",
+    "liveUpdate": "Ergebnisse werden live aktualisiert",
+    "lprLabel": "Zahlungsverzugsrate",
+    "lprSublabel": "% der Rechnungen verspätet bezahlt",
+    "urLabel": "Ausfallrate",
+    "urSublabel": "% der Rechnungen nie bezahlt",
+    "showMore": "Mehr Parameter anzeigen",
+    "showLess": "Weniger Parameter anzeigen",
+    "hscLabel": "Eintreibstunden / Monat",
+    "hscSublabel": "Gesamtstunden für das Eintreiben",
+    "hicLabel": "Interner Stundensatz",
+    "hicSublabel": "Kosten pro Stunde Mitarbeiterzeit",
+    "tmLabel": "Teammitglieder",
+    "tmSublabel": "Anzahl der Mitarbeiter, die Zahlungen eintreiben",
+    "krrLabel": "Wiederherstellungsszenario",
+    "krrSublabel": "Sehen Sie, wie effizient Kleverbill sein müsste, um sich selbst zu finanzieren",
+    "exposureBreakdown": "Aufschlüsselung der Exposition",
+    "revenueAtRisk": "Gefährdeter Umsatz",
+    "labourCost": "Arbeitskosten",
+    "delayCost": "Verzögerungskosten",
+    "totalExposure": "Gesamte Exposition"
+  },
+  "pricingAnchor": {
+    "label": "Beim {tier}-Tarif ({priceLabel}), das ist geschätzt:",
+    "roi": "monatlicher ROI",
+    "description": "Für jeden Euro, den Sie für Kleverbill ausgeben, erhalten Sie diese vielen Euro durch unbezahlte Rechnungen, Arbeitseinsparungen und beschleunigten Cashflow zurück."
+  },
+  "planRecommendation": {
+    "recommended": "{tier}-Tarif empfohlen",
+    "seeDetails": "Details anzeigen",
+    "getStarted": "Loslegen",
+    "contactSales": "Vertrieb kontaktieren",
+    "seeFullDetails": "Vollständige Tarifdetails anzeigen"
+  },
+  "ctaSection": {
+    "eyebrow": "Bereit, Ihren Umsatz zurückzugewinnen?",
+    "headlinePre": "Hören Sie auf, Geld",
+    "headlineStrong": "zu verschenken",
+    "body": "Wir zeigen Ihnen, wo Ihr aktueller Prozess Umsatz verliert, was automatisiert werden kann und welcher Tarif zu Ihrem Rechnungsvolumen passt.",
+    "bookAudit": "Kostenloses Recovery-Audit buchen",
+    "recalculate": "Mit anderen Zahlen neu berechnen"
+  },
+  "resultsDisclaimer": "Die Schätzungen basieren auf den von Ihnen angegebenen Informationen und Branchenannahmen. Ihr tatsächliches Wiederherstellungspotenzial hängt von der Rechnungsqualität, dem Zahlungsverhalten der Kunden und der Workflow-Einrichtung ab.",
+  "plans": {
+    "Silver": {
+      "description": "Ein guter Einstieg für Unternehmen mit geringem Volumen.",
+      "priceLabel": "€39/Monat",
+      "features": [
+        "Bis zu 25 Rechnungen/Monat",
+        "PDF-Export & E-Mail-Versand",
+        "Dokumenten-Upload & interne Notizen",
+        "Grundlegende Mahnautomatisierung",
+        "Zahlungsüberwachung",
+        "E-Mail-Support"
+      ]
+    },
+    "Gold": {
+      "description": "Ideal für wachsende Unternehmen mit regelmäßigem Rechnungsvolumen.",
+      "priceLabel": "€199/Monat",
+      "features": [
+        "Bis zu 250 Rechnungen/Monat",
+        "Alles aus Silver",
+        "API- & SMTP-Integration",
+        "White-Label-Erinnerungen & Vorlagen",
+        "CSV-Import & Bankenschnittstelle",
+        "Angepasste Mahnlevels & Workflows",
+        "Telefon- und E-Mail-Support"
+      ]
+    },
+    "Platinum": {
+      "description": "Ihr Volumen, Umsatz oder Ihre Ausfallrate ordnet Sie in unsere höchste Stufe ein.",
+      "priceLabel": "€449/Monat",
+      "features": [
+        "Bis zu 1.000 Rechnungen/Monat",
+        "Alles aus Gold",
+        "Automatisierte Zahlungserinnerungen & Pausen",
+        "ERP/CRM-Integration & Datenexport",
+        "CSV-Import/-Export & Bankenschnittstelle",
+        "Persönlicher Account Manager",
+        "Optionaler Back-Office-Service"
+      ]
+    },
+    "Enterprise": {
+      "description": "Ihr Umfang legt eine individuelle Einrichtung nahe – mehrere Einheiten, hohes Volumen oder komplexe Inkasso-Workflows.",
+      "priceLabel": "Individuelle Preisgestaltung",
+      "features": [
+        "Unbegrenzte Rechnungen",
+        "PDF-Export & E-Mail-Versand",
+        "Maßgeschneiderte Workflows",
+        "Dedizierter Server & Schnittstelle für das Inkasso",
+        "Persönlicher Support & Beratung",
+        "Premium-Support",
+        "Optionaler Back-Office-Service"
+      ]
+    }
+  },
+  "validation": {
+    "monthlyRevenue": {
+      "required": "Monatsumsatz ist erforderlich",
+      "positive": "Muss eine positive Zahl sein"
+    },
+    "invoiceCount": {
+      "required": "Rechnungsanzahl ist erforderlich",
+      "positive": "Muss eine positive Zahl sein"
+    },
+    "avgInvoiceValue": {
+      "required": "Durchschnittlicher Rechnungswert ist erforderlich",
+      "positive": "Muss eine positive Zahl sein"
+    },
+    "chasingHours": {
+      "required": "Eintreibstunden sind erforderlich",
+      "nonNegative": "Darf nicht negativ sein"
+    },
+    "chasingHoursPerInvoice": {
+      "required": "Stunden pro Rechnung sind erforderlich",
+      "nonNegative": "Darf nicht negativ sein"
+    },
+    "invoiceCountMode": {
+      "required": "Rechnungsanzahl ist für diesen Modus erforderlich"
+    }
+  }
+}
