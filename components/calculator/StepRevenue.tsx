@@ -24,7 +24,7 @@ export function StepRevenue() {
         <p className="text-[17px] font-medium text-on-surface">{t('title')}</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <InputField
           label={t('invoicesPerMonth')}
           placeholder="50"

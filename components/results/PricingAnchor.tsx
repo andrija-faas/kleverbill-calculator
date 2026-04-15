@@ -14,7 +14,7 @@ export function PricingAnchor({ roi, plan }: PricingAnchorProps) {
   const priceLabel = tPlans(`${plan.tier as PlanTier}.priceLabel` as Parameters<typeof tPlans>[0])
 
   return (
-    <div className="bg-surface-lowest rounded-2xl p-8">
+    <div className="bg-surface-lowest rounded-2xl p-5 sm:p-8">
       <p className="text-[10px] font-medium tracking-[0.05em] uppercase text-on-surface-variant mb-1">
         {t('label', { tier: plan.tier, priceLabel })}
       </p>

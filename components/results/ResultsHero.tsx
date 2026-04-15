@@ -9,8 +9,7 @@ interface ResultsHeroProps {
   rd: string
   rr: string
   icc: string
-  // raw numbers for the bar chart inside the ELS card
-  elsFraction: number // ELS / (ERUV + ELS) — 0..1
+  elsFraction: number
 }
 
 export function ResultsHero({ emrl, mrv, els, rd, rr, icc, elsFraction }: ResultsHeroProps) {
@@ -18,31 +17,31 @@ export function ResultsHero({ emrl, mrv, els, rd, rr, icc, elsFraction }: Result
   const eruFraction = 1 - elsFraction
 
   return (
-    <div className="bg-surface pt-28 pb-0">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12">
+    <div className="bg-surface pt-12 sm:pt-28 pb-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Two-column hero */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
 
           {/* Left — headline + MRV + supporting tiles */}
           <div>
-            <p className="text-[11px] font-medium tracking-[0.10em] uppercase text-primary mb-5">
+            <p className="text-[11px] font-medium tracking-[0.10em] uppercase text-primary mb-4 sm:mb-5">
               {t('eyebrow')}
             </p>
-            <h1 className="text-[clamp(1.8rem,4vw,2.8rem)] font-light leading-[1.15] tracking-[-0.02em] text-on-surface mb-2">
+            <h1 className="text-[clamp(1.6rem,4vw,2.8rem)] font-light leading-[1.15] tracking-[-0.02em] text-on-surface mb-2">
               {t('headlinePre')}{' '}
               <strong className="font-semibold">{emrl}</strong>{' '}
               {t('headlinePost')}
             </h1>
-            <p className="text-[14px] text-on-surface-variant mb-10">
+            <p className="text-[14px] text-on-surface-variant mb-8 sm:mb-10">
               {t('subtitle')}
             </p>
 
-            {/* Recovered revenue — main hero metric */}
-            <div className="mb-8">
+            {/* Recovered revenue */}
+            <div className="mb-6 sm:mb-8">
               <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-on-surface-variant mb-1">
                 {t('recoveredRevenue')}
               </p>
-              <p className="text-[3.2rem] font-semibold text-primary leading-none tracking-[-0.03em]">
+              <p className="text-[clamp(2.2rem,6vw,3.2rem)] font-semibold text-primary leading-none tracking-[-0.03em]">
                 {mrv}
               </p>
               <p className="text-[12px] text-on-surface-variant mt-1.5">
@@ -51,7 +50,7 @@ export function ResultsHero({ emrl, mrv, els, rd, rr, icc, elsFraction }: Result
             </div>
 
             {/* Supporting mini-tiles */}
-            <div className="grid grid-cols-3 gap-4 py-6 border-t border-outline-variant/20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6 border-t border-outline-variant/20">
               <div>
                 <p className="text-[10px] font-medium tracking-[0.05em] uppercase text-on-surface-variant mb-0.5">
                   {t('delayedLabel')}
@@ -79,11 +78,11 @@ export function ResultsHero({ emrl, mrv, els, rd, rr, icc, elsFraction }: Result
           {/* Right — stacked metric cards */}
           <div className="space-y-4">
             {/* EMRL exposure card */}
-            <div className="rounded-2xl bg-surface-lowest shadow-card p-7">
+            <div className="rounded-2xl bg-surface-lowest shadow-card p-5 sm:p-7">
               <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-on-surface-variant mb-1">
                 {t('monthlyExposure')}
               </p>
-              <p className="text-[2.8rem] font-light leading-none tracking-[-0.03em] text-on-surface mb-1">
+              <p className="text-[clamp(2rem,5vw,2.8rem)] font-light leading-none tracking-[-0.03em] text-on-surface mb-1">
                 {emrl}
               </p>
               <p className="text-[12px] text-on-surface-variant">
@@ -91,22 +90,20 @@ export function ResultsHero({ emrl, mrv, els, rd, rr, icc, elsFraction }: Result
               </p>
             </div>
 
-            {/* ELS dark card with mini bar chart */}
+            {/* ELS dark card */}
             <div
-              className="rounded-2xl p-7 relative overflow-hidden"
+              className="rounded-2xl p-5 sm:p-7 relative overflow-hidden"
               style={{ background: 'linear-gradient(135deg, #466800 0%, #3d5b00 100%)' }}
             >
-              {/* Decorative circle */}
               <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-white/[0.06]" />
 
               <p className="text-[10px] font-medium tracking-[0.08em] uppercase text-white/60 mb-1 relative z-10">
                 {t('labourSavingsLabel')}
               </p>
-              <p className="text-[2.2rem] font-semibold leading-none tracking-[-0.03em] text-white mb-4 relative z-10">
+              <p className="text-[clamp(1.6rem,4vw,2.2rem)] font-semibold leading-none tracking-[-0.03em] text-white mb-4 relative z-10">
                 {els}
               </p>
 
-              {/* Mini breakdown bar */}
               <div className="relative z-10 mb-2">
                 <div className="flex rounded-full overflow-hidden h-2">
                   <div

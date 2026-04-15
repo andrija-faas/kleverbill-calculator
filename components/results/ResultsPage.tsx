@@ -29,12 +29,11 @@ export function ResultsPage() {
 
   const roi = plan.price ? results.MRV / plan.price : null
 
-  // Fraction of MRV that comes from labour savings (for the bar in the ELS card)
   const elsFraction = results.MRV > 0 ? results.ELS / results.MRV : 0.3
 
   return (
     <div className="min-h-screen bg-surface">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 pt-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6">
         <Nav />
       </div>
 
@@ -48,7 +47,7 @@ export function ResultsPage() {
         elsFraction={elsFraction}
       />
 
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-12 space-y-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-12 space-y-4">
         <KleverbillEstimate
           eruv={formatRange(results.ERUVLow, results.ERUVHigh)}
           els={formatEur(results.ELS)}

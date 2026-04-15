@@ -13,10 +13,9 @@ export function CtaSection() {
 
   return (
     <div
-      className="rounded-xl p-12 text-center relative overflow-hidden"
+      className="rounded-xl p-8 sm:p-12 text-center relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #466800 0%, #3d5b00 100%)' }}
     >
-      {/* Decorative circle */}
       <div className="absolute -top-10 -right-10 w-52 h-52 rounded-full bg-white/[0.06]" />
 
       <p className="text-[11px] font-medium tracking-[0.12em] uppercase text-white/65 mb-3">

@@ -31,15 +31,15 @@ export function ScenarioExplorer() {
   ]
 
   return (
-    <div className="bg-surface-lowest rounded-2xl p-8">
-      <div className="flex items-start justify-between mb-8">
+    <div className="bg-surface-lowest rounded-2xl p-5 sm:p-8">
+      <div className="flex items-start justify-between mb-6 sm:mb-8">
         <div>
           <p className="text-[10px] font-medium tracking-[0.10em] uppercase text-primary mb-1">
             {t('eyebrow')}
           </p>
           <p className="text-[17px] font-medium text-on-surface">{t('title')}</p>
         </div>
-        <p className="text-[13px] text-on-surface-variant">{t('liveUpdate')}</p>
+        <p className="text-[13px] text-on-surface-variant hidden sm:block">{t('liveUpdate')}</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -133,7 +133,7 @@ export function ScenarioExplorer() {
         </div>
 
         {/* Right — exposure breakdown chart */}
-        <div className="p-6 rounded-xl bg-surface-low space-y-4 self-start">
+        <div className="p-4 sm:p-6 rounded-xl bg-surface-low space-y-4 self-start">
           <p className="text-[11px] font-medium tracking-[0.06em] uppercase text-on-surface-variant">
             {t('exposureBreakdown')}
           </p>
