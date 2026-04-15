@@ -1,29 +1,26 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { StickyNote } from 'lucide-react'
 
 export function LivePreviewCard() {
   const t = useTranslations('livePreview')
 
   return (
-    <div className="rounded-2xl bg-surface-lowest shadow-card overflow-hidden sticky top-24">
-      {/* Header */}
-      <div className="px-7 py-5 border-b border-outline-variant/20">
-        <p className="text-[9px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant">
+    <div className="group w-fit hover:w-full rounded-2xl bg-transparent hover:bg-surface-lowest shadow-none hover:shadow-card overflow-hidden sticky top-24 transition-[width,background-color,box-shadow,grid-template-rows] duration-300">
+      <div className="px-7 py-5 flex items-center gap-2">
+        <StickyNote size={13} className="text-on-surface-variant shrink-0" />
+        <p className="text-[9px] font-semibold tracking-[0.15em] uppercase text-on-surface-variant whitespace-nowrap">
           {t('header')}
         </p>
       </div>
 
-      <div className="px-7 py-6">
-        <p className="text-[13px] text-on-surface-variant leading-[1.7]">
-          {t('p1')}
-        </p>
-        <p className="text-[13px] text-on-surface-variant leading-[1.7] mt-4">
-          {t('p2')}
-        </p>
-        <p className="text-[13px] text-on-surface-variant leading-[1.7] mt-4">
-          {t('p3')}
-        </p>
+      <div className="px-7 grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300">
+        <div className="overflow-hidden">
+          <p className="text-[13px] text-on-surface-variant leading-[1.7] pb-6">
+            {t('p2')}
+          </p>
+        </div>
       </div>
     </div>
   )

@@ -85,6 +85,9 @@ export function CalculatorForm() {
                   {t('calculateNow')}
                   <ArrowRight size={16} />
                 </button>
+                <p className="text-[12px] text-on-surface-variant/60 leading-[1.6] mt-3">
+                  {t('disclaimer')}
+                </p>
               </div>
             </ProgressiveStep>
           </div>

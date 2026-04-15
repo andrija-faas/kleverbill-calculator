@@ -17,7 +17,8 @@
     "subline2": "Wir haben einen kostenlosen Rechner entwickelt, um Ihren echten Verlust zu zeigen.",
     "errorStep1": "Bitte vervollständigen Sie Schritt 1, bevor Sie fortfahren.",
     "errorStep2": "Bitte vervollständigen Sie Schritt 2, bevor Sie fortfahren.",
-    "calculateNow": "Jetzt berechnen"
+    "calculateNow": "Jetzt berechnen",
+    "disclaimer": "Die in diesem Rechner angezeigten Zahlen dienen nur zur Veranschaulichung und sollen keine genauen Finanzprognosen darstellen."
   },
   "stepRevenue": {
     "title": "Wie hoch ist Ihr monatliches Rechnungsvolumen?",
@@ -43,9 +44,7 @@
   },
   "livePreview": {
     "header": "Hinweis des Erstellers",
-    "p1": "Die in diesem Rechner angezeigten Zahlen dienen nur zur Veranschaulichung und sollen keine genauen Finanzprognosen darstellen.",
-    "p2": "Die Berechnungen verwenden vereinfachte Modelle und branchendurchschnittliche Annahmen, um ein allgemeines Größengefühl zu vermitteln. Die tatsächlichen Ergebnisse können je nach Ihrem spezifischen Unternehmen, Ihren Kunden, Ihren Umständen und der Genauigkeit Ihrer Eingabedaten variieren.",
-    "p3": "Dies ist kein Datenspeicherungstool – alle Nutzer sehen ihre Ergebnisse vollständig anonym und kostenlos."
+    "p2": "Dies ist kein Datenspeicherungstool – alle Nutzer sehen ihre Ergebnisse vollständig anonym und kostenlos."
   },
   "stepScenario": {
     "title": "Wählen Sie Ihr Wiederherstellungsszenario",

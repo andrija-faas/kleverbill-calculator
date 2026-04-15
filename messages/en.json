@@ -17,7 +17,8 @@
     "subline2": "We built a free calculator to show your real loss.",
     "errorStep1": "Please complete Step 1 before continuing.",
     "errorStep2": "Please complete Step 2 before continuing.",
-    "calculateNow": "Calculate now"
+    "calculateNow": "Calculate now",
+    "disclaimer": "The figures shown in this calculator are illustrative only and are not intended to represent accurate financial projections."
   },
   "stepRevenue": {
     "title": "What is your monthly invoice volume?",
@@ -43,9 +44,7 @@
   },
   "livePreview": {
     "header": "Maker's Note",
-    "p1": "The figures shown in this calculator are illustrative only and are not intended to represent accurate financial projections.",
-    "p2": "The calculations use simplified models and industry-average assumptions to give a general sense of scale. Actual results will vary based on your specific business, customers, circumstances as well as the accuracy of your input data.",
-    "p3": "This is not a contact collection tool — all users see their results completely anonymously and free."
+    "p2": "This is not a contact collection tool — all users see their results completely anonymously and free."
   },
   "stepScenario": {
     "title": "Choose your recovery scenario",
