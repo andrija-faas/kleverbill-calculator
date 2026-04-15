@@ -45,12 +45,12 @@ export function CalculatorForm() {
   return (
     <div className="min-h-screen bg-surface">
       {/* Hero */}
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 pt-6 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6 pb-8 sm:pb-12">
         <Nav />
-        <p className="text-[11px] font-medium tracking-[0.10em] uppercase text-primary mb-5">
+        <p className="text-[11px] font-medium tracking-[0.10em] uppercase text-primary mb-4 sm:mb-5">
           {t('eyebrow')}
         </p>
-        <h1 className="text-[clamp(2.2rem,5vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-on-surface mb-5">
+        <h1 className="text-[clamp(1.8rem,5vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em] text-on-surface mb-4 sm:mb-5">
           {t('headlinePre')}{' '}
           <strong className="font-semibold text-primary">{t('headlineStrong')}</strong>
         </h1>
@@ -62,7 +62,7 @@ export function CalculatorForm() {
       </div>
 
       {/* Two-column layout */}
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 pb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pb-16 sm:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] xl:grid-cols-[1fr_420px] gap-8 lg:gap-12 items-start">
 
           {/* Left — form steps */}
@@ -89,7 +89,7 @@ export function CalculatorForm() {
             </ProgressiveStep>
           </div>
 
-          {/* Right — live preview */}
+          {/* Right — live preview (desktop only) */}
           <div className="hidden lg:block">
             <LivePreviewCard />
           </div>

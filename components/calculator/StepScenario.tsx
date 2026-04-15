@@ -49,7 +49,7 @@ export function StepScenario() {
         <p className="text-[17px] font-medium text-on-surface">{t('title')}</p>
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {SCENARIOS.map((s) => (
           <ScenarioCard
             key={s.scenario}

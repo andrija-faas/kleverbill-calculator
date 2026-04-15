@@ -24,12 +24,16 @@ export function Slider({
   className,
 }: SliderProps) {
   return (
-    <div className={cn('grid items-center gap-5', className)}
-      style={{ gridTemplateColumns: '180px 1fr 72px' }}>
-      <div>
-        <p className="text-[13px] font-medium text-on-surface">{label}</p>
-        <p className="text-[11px] text-on-surface-variant">{sublabel}</p>
+    <div className={cn('space-y-2', className)}>
+      {/* Label row — label left, value right */}
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="text-[13px] font-medium text-on-surface">{label}</p>
+          <p className="text-[11px] text-on-surface-variant">{sublabel}</p>
+        </div>
+        <p className="text-[15px] font-semibold text-primary shrink-0 pt-0.5">{displayValue}</p>
       </div>
+      {/* Slider — full width */}
       <input
         type="range"
         min={min}
@@ -37,8 +41,8 @@ export function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
+        className="w-full"
       />
-      <p className="text-[15px] font-semibold text-primary text-right">{displayValue}</p>
     </div>
   )
 }

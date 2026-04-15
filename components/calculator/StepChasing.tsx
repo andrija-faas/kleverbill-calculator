@@ -61,7 +61,7 @@ export function StepChasing() {
         />
       )}
 
-      <div className="mt-4 grid grid-cols-2 gap-4">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <InputField
           label={t('labelHic')}
           prefix="€"

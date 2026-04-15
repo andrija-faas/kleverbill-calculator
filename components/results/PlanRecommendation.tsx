@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import type { Plan, PlanTier } from '@/types/calculator.types'
 import { PlanBadge } from '@/components/ui/PlanBadge'
 import { Button } from '@/components/ui/Button'
@@ -16,6 +16,7 @@ interface PlanRecommendationProps {
 export function PlanRecommendation({ plan }: PlanRecommendationProps) {
   const t = useTranslations('planRecommendation')
   const tPlans = useTranslations('plans')
+  const locale = useLocale()
   const [open, setOpen] = useState(false)
   const [calendlyOpen, setCalendlyOpen] = useState(false)
 
@@ -27,22 +28,26 @@ export function PlanRecommendation({ plan }: PlanRecommendationProps) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const features = tPlans.raw(`${tierKey}.features` as any) as string[]
 
+  const planDetailsUrl = locale === 'en'
+    ? 'https://www.kleverbill.de/en/pricing'
+    : 'https://www.kleverbill.de/preis'
+
   return (
-    <div className="bg-surface-lowest rounded-2xl p-8">
-      <div className="flex items-center justify-between gap-6 flex-wrap">
-        <div>
+    <div className="bg-surface-lowest rounded-2xl p-5 sm:p-8">
+      <div className="flex items-start justify-between gap-4 flex-wrap">
+        <div className="min-w-0">
           <PlanBadge tier={plan.tier} className="mb-2" />
           <p className="text-[16px] font-medium text-on-surface mb-1">
             {t('recommended', { tier: plan.tier })}
           </p>
           <p className="text-[13px] text-on-surface-variant">{description}</p>
         </div>
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
           <Button
             variant="secondary"
             size="md"
             onClick={() => setOpen(v => !v)}
-            style={{ whiteSpace: 'nowrap' }}
+            className="justify-center"
           >
             {t('seeDetails')}
             <ChevronDown
@@ -52,8 +57,8 @@ export function PlanRecommendation({ plan }: PlanRecommendationProps) {
           </Button>
           <Button
             size="md"
-            style={{ whiteSpace: 'nowrap' }}
             onClick={() => setCalendlyOpen(true)}
+            className="justify-center"
           >
             {plan.price === null ? t('contactSales') : t('getStarted')}
             <ArrowRight size={15} />
@@ -77,7 +82,7 @@ export function PlanRecommendation({ plan }: PlanRecommendationProps) {
             ))}
           </ul>
           <a
-            href="https://www.kleverbill.de/preis"
+            href={planDetailsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-[13px] text-primary font-medium hover:underline"

@@ -16,7 +16,7 @@ export function ToggleGroup({ options, value, onChange, className }: ToggleGroup
   return (
     <div
       className={cn(
-        'flex bg-surface-low rounded-full p-1 w-fit mb-6',
+        'flex bg-surface-low rounded-full p-1 w-full sm:w-fit mb-6',
         className,
       )}
     >
@@ -26,7 +26,7 @@ export function ToggleGroup({ options, value, onChange, className }: ToggleGroup
           type="button"
           onClick={() => onChange(option.value)}
           className={cn(
-            'px-[18px] py-1.5 rounded-full text-[13px] transition-all duration-200 whitespace-nowrap',
+            'flex-1 sm:flex-none px-[18px] py-1.5 rounded-full text-[13px] transition-all duration-200 whitespace-nowrap',
             value === option.value
               ? 'bg-surface-lowest text-primary font-medium shadow-sm'
               : 'text-on-surface-variant font-normal hover:text-on-surface',
