@@ -50,7 +50,7 @@ function decodeUtm(utm: string): Record<string, string> {
 // ─── Email formatter ─────────────────────────────────────────────────────────
 
 function formatEmail(payload: CalendlyPayload): string {
-  const { name, email, startTime, hscMode, content, term } = payload
+  const { name, email, startTime, content, term } = payload
 
   const bookedFor = new Date(startTime).toLocaleString('en-GB', {
     day: '2-digit',
@@ -64,31 +64,37 @@ function formatEmail(payload: CalendlyPayload): string {
   const row = (label: string, value: string) =>
     `<tr><td style="padding:2px 16px 2px 0;color:#6b7280;white-space:nowrap">${label}</td><td style="padding:2px 0">${value}</td></tr>`
 
-  const formRows = [
-    row('Mode', hscMode === 'hsci' ? 'HSC-I (per invoice)' : 'HSC (total hours)'),
-    row('IN', content['IN'] ?? '—'),
-    row('AVGIV', content['AVGIV'] ? `€${content['AVGIV']}` : '—'),
-    row('LPR', content['LPR'] ?? '—'),
-    row('UR', content['UR'] ?? '—'),
-    hscMode === 'hsci'
-      ? row('HSCI', term['HSCI'] ?? '—')
-      : row('HSC', term['HSC'] ?? '—'),
-    row('HIC', term['HIC'] ?? '—'),
-    row('TM', term['TM'] ?? '—'),
-    row('KRR', term['KRR'] ?? '—'),
+  const eur = (key: string) => {
+    const val = content[key]
+    return val ? `€ ${Number(val).toLocaleString('de-DE')}` : '—'
+  }
+
+  const outputRows = [
+    row('Monthly Invoiced Value', eur('MIV')),
+    row('Estimated Monthly Receivables Lost', eur('EMRL')),
+    row('Revenue Delayed', eur('RD')),
+    row('Revenue at Risk', eur('RR')),
+    row('Spent on Manual Chasing', eur('ICC')),
+    row('Delay Cost', eur('DC')),
+    row('Estimated Recoverable Unpaid Value', eur('ERUV')),
+    row('Estimated Labour Savings', eur('ELS')),
+    row('Accelerated Cash Benefit', eur('ACB')),
+    row('Monthly Recoverable Value', eur('MRV')),
+    row('Recommended Plan', term['Plan'] ?? '—'),
+    row('Return on Investment', term['ROI'] ?? '—'),
   ]
 
   return `
-<div style="font-family:sans-serif;font-size:14px;color:#111;max-width:480px">
+<div style="font-family:sans-serif;font-size:14px;color:#111;max-width:520px">
   <table style="border-collapse:collapse;margin-bottom:24px">
     ${row('Name', name)}
     ${row('Email', `<a href="mailto:${email}">${email}</a>`)}
     ${row('Booked for', bookedFor)}
   </table>
   <hr style="border:none;border-top:1px solid #e5e7eb;margin-bottom:24px"/>
-  <p style="margin:0 0 12px;font-weight:600;color:#374151">Form data</p>
+  <p style="margin:0 0 12px;font-weight:600;color:#374151">Calculator results</p>
   <table style="border-collapse:collapse">
-    ${formRows.join('\n')}
+    ${outputRows.join('\n')}
   </table>
 </div>
 `
@@ -100,7 +106,6 @@ interface CalendlyPayload {
   name: string
   email: string
   startTime: string
-  hscMode: string
   content: Record<string, string>
   term: Record<string, string>
 }
@@ -137,11 +142,10 @@ const scheduledEvent = (p['scheduled_event'] ?? {}) as Record<string, unknown>
   const name = (p['name'] as string) ?? 'Unknown'
   const email = (p['email'] as string) ?? ''
   const startTime = (scheduledEvent['start_time'] as string) ?? ''
-  const hscMode = tracking?.['utm_medium'] ?? 'hsc'
   const content = tracking?.['utm_content'] ? decodeUtm(tracking['utm_content']) : {}
   const term = tracking?.['utm_term'] ? decodeUtm(tracking['utm_term']) : {}
 
-  const payload: CalendlyPayload = { name, email, startTime, hscMode, content, term }
+  const payload: CalendlyPayload = { name, email, startTime, content, term }
 
   const { data, error } = await resend.emails.send({
     from: 'info@faasflow.com',

@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useCalculatorStore } from '@/lib/store'
 import { buildCalendlyUrl } from '@/lib/buildCalendlyUrl'
+import { calculate } from '@/lib/calculations'
+import { recommendPlan } from '@/lib/planTiers'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
 import { CalendlyModal } from '@/components/ui/CalendlyModal'
 
@@ -11,7 +13,11 @@ export function CtaSection() {
   const t = useTranslations('ctaSection')
   const reset = useCalculatorStore((s) => s.reset)
   const formState = useCalculatorStore((s) => s.formState)
+  const sliderState = useCalculatorStore((s) => s.sliderState)
   const [calendlyOpen, setCalendlyOpen] = useState(false)
+
+  const results = calculate(formState, sliderState)
+  const plan = recommendPlan(results.MIV, formState.invoiceCount, sliderState.ur)
 
   return (
     <div
@@ -56,7 +62,7 @@ export function CtaSection() {
       <CalendlyModal
         isOpen={calendlyOpen}
         onClose={() => setCalendlyOpen(false)}
-        url={buildCalendlyUrl(formState)}
+        url={buildCalendlyUrl(formState, results, plan)}
       />
     </div>
   )

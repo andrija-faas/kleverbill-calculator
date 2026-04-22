@@ -9,10 +9,15 @@ import { CalendlyModal } from '@/components/ui/CalendlyModal'
 import { LocaleSwitcher } from '@/components/LocaleSwitcher'
 import { useCalculatorStore } from '@/lib/store'
 import { buildCalendlyUrl } from '@/lib/buildCalendlyUrl'
+import { calculate } from '@/lib/calculations'
+import { recommendPlan } from '@/lib/planTiers'
 
 export function Nav() {
   const t = useTranslations('nav')
   const formState = useCalculatorStore((s) => s.formState)
+  const sliderState = useCalculatorStore((s) => s.sliderState)
+  const results = calculate(formState, sliderState)
+  const plan = recommendPlan(results.MIV, formState.invoiceCount, sliderState.ur)
   const [menuOpen, setMenuOpen] = useState(false)
   const [calendlyOpen, setCalendlyOpen] = useState(false)
 
@@ -110,7 +115,7 @@ export function Nav() {
       <CalendlyModal
         isOpen={calendlyOpen}
         onClose={() => setCalendlyOpen(false)}
-        url={buildCalendlyUrl(formState)}
+        url={buildCalendlyUrl(formState, results, plan)}
       />
     </nav>
   )
