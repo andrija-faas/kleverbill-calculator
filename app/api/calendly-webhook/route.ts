@@ -131,8 +131,7 @@ export async function POST(req: NextRequest) {
   }
 
   const p = body['payload'] as Record<string, unknown>
-  console.log('[calendly-webhook] event_uri', p['event'], 'tracking', JSON.stringify(p['tracking']))
-  const scheduledEvent = (p['scheduled_event'] ?? {}) as Record<string, unknown>
+const scheduledEvent = (p['scheduled_event'] ?? {}) as Record<string, unknown>
   const tracking = p['tracking'] as Record<string, string> | undefined
 
   const name = (p['name'] as string) ?? 'Unknown'
@@ -152,8 +151,6 @@ export async function POST(req: NextRequest) {
   })
   if (error) {
     console.error('[calendly-webhook] resend error', JSON.stringify(error))
-  } else {
-    console.log('[calendly-webhook] email sent', data?.id)
   }
 
   return NextResponse.json({ ok: true })
