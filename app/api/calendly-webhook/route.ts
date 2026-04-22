@@ -144,17 +144,16 @@ export async function POST(req: NextRequest) {
 
   const payload: CalendlyPayload = { name, email, startTime, hscMode, content, term }
 
-  try {
-    await resend.emails.send({
-      from: 'info@faasflow.com',
-      to: 'andrija.varga@faasflow.com',
-      subject: `New booking — ${name}`,
-      html: formatEmail(payload),
-    })
-  } catch (err) {
-    // Log but always return 200 — Calendly retries on non-2xx which causes
-    // duplicate emails.
-    console.error('[calendly-webhook] resend error', err)
+  const { data, error } = await resend.emails.send({
+    from: 'info@faasflow.com',
+    to: 'andrija.varga@faasflow.com',
+    subject: `New booking — ${name}`,
+    html: formatEmail(payload),
+  })
+  if (error) {
+    console.error('[calendly-webhook] resend error', JSON.stringify(error))
+  } else {
+    console.log('[calendly-webhook] email sent', data?.id)
   }
 
   return NextResponse.json({ ok: true })
