@@ -7,9 +7,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Logo } from './Logo'
 import { CalendlyModal } from '@/components/ui/CalendlyModal'
 import { LocaleSwitcher } from '@/components/LocaleSwitcher'
+import { useCalculatorStore } from '@/lib/store'
+import { buildCalendlyUrl } from '@/lib/buildCalendlyUrl'
 
 export function Nav() {
   const t = useTranslations('nav')
+  const formState = useCalculatorStore((s) => s.formState)
   const [menuOpen, setMenuOpen] = useState(false)
   const [calendlyOpen, setCalendlyOpen] = useState(false)
 
@@ -104,7 +107,11 @@ export function Nav() {
         )}
       </AnimatePresence>
 
-      <CalendlyModal isOpen={calendlyOpen} onClose={() => setCalendlyOpen(false)} />
+      <CalendlyModal
+        isOpen={calendlyOpen}
+        onClose={() => setCalendlyOpen(false)}
+        url={buildCalendlyUrl(formState)}
+      />
     </nav>
   )
 }

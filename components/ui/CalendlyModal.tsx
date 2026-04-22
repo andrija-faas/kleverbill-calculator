@@ -3,14 +3,13 @@
 import { useEffect } from 'react'
 import { X } from 'lucide-react'
 
-const CALENDLY_URL = 'https://calendly.com/kleverbill/kleverbill-analyse-rechner'
-
 interface CalendlyModalProps {
   isOpen: boolean
   onClose: () => void
+  url: string
 }
 
-export function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
+export function CalendlyModal({ isOpen, onClose, url }: CalendlyModalProps) {
   useEffect(() => {
     if (!isOpen) return
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
@@ -42,7 +41,7 @@ export function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
           <X size={16} className="text-gray-700" />
         </button>
         <iframe
-          src={CALENDLY_URL}
+          src={url}
           className="w-full flex-1 border-0"
           title="Book a meeting"
         />
