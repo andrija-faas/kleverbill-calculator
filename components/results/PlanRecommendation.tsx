@@ -6,6 +6,9 @@ import type { Plan, PlanTier } from '@/types/calculator.types'
 import { PlanBadge } from '@/components/ui/PlanBadge'
 import { Button } from '@/components/ui/Button'
 import { CalendlyModal } from '@/components/ui/CalendlyModal'
+import { useCalculatorStore } from '@/lib/store'
+import { buildCalendlyUrl } from '@/lib/buildCalendlyUrl'
+import { calculate } from '@/lib/calculations'
 import { ArrowRight, Check, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -17,6 +20,9 @@ export function PlanRecommendation({ plan }: PlanRecommendationProps) {
   const t = useTranslations('planRecommendation')
   const tPlans = useTranslations('plans')
   const locale = useLocale()
+  const formState = useCalculatorStore((s) => s.formState)
+  const sliderState = useCalculatorStore((s) => s.sliderState)
+  const results = calculate(formState, sliderState)
   const [open, setOpen] = useState(false)
   const [calendlyOpen, setCalendlyOpen] = useState(false)
 
@@ -93,7 +99,11 @@ export function PlanRecommendation({ plan }: PlanRecommendationProps) {
         </div>
       )}
 
-      <CalendlyModal isOpen={calendlyOpen} onClose={() => setCalendlyOpen(false)} />
+      <CalendlyModal
+        isOpen={calendlyOpen}
+        onClose={() => setCalendlyOpen(false)}
+        url={buildCalendlyUrl(formState, results, plan)}
+      />
     </div>
   )
 }
