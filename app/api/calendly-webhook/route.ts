@@ -146,8 +146,8 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'calculator@kleverbill.de',
-      to: 'team@kleverbill.de',
+      from: 'info@faasflow.com',
+      to: 'andrija.varga@faasflow.com',
       subject: `New booking — ${name}`,
       html: formatEmail(payload),
     })
