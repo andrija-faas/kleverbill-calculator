@@ -130,9 +130,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true })
   }
 
+  console.log('[calendly-webhook] payload keys', JSON.stringify(Object.keys(body['payload'] as object)))
+
   const p = body['payload'] as Record<string, unknown>
-  const invitee = p['invitee'] as Record<string, unknown>
-  const scheduledEvent = p['scheduled_event'] as Record<string, unknown>
+  const invitee = (p['invitee'] ?? {}) as Record<string, unknown>
+  const scheduledEvent = (p['scheduled_event'] ?? {}) as Record<string, unknown>
   const tracking = p['tracking'] as Record<string, string> | undefined
 
   const name = (invitee['name'] as string) ?? 'Unknown'
