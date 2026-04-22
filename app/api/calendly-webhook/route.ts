@@ -145,7 +145,7 @@ export async function POST(req: NextRequest) {
   const payload: CalendlyPayload = { name, email, startTime, hscMode, content, term }
 
   const { data, error } = await resend.emails.send({
-    from: 'onboarding@resend.dev',
+    from: 'info@faasflow.com',
     to: 'andrija.varga@faasflow.com',
     subject: `New booking — ${name}`,
     html: formatEmail(payload),
