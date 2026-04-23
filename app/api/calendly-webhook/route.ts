@@ -148,7 +148,7 @@ const scheduledEvent = (p['scheduled_event'] ?? {}) as Record<string, unknown>
   const resend = new Resend(process.env.RESEND_API_KEY)
   const { data, error } = await resend.emails.send({
     from: 'info@faasflow.com',
-    to: ['andrija.varga@faasflow.com', 'info@kleverbill.de'],
+    to: ['andrija.varga@faasflow.com', 'info@kleverbill.de', 'eleonora_vurmo90@yahoo.com'],
     subject: `New booking — ${name}`,
     html: formatEmail(payload),
   })
