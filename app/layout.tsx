@@ -1,4 +1,12 @@
+import type { Metadata } from 'next'
 import { getLocale } from 'next-intl/server'
+
+export const metadata: Metadata = {
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
+}
 
 // Minimal root layout — sets <html lang> dynamically.
 // Fonts, metadata, and providers live in app/[locale]/layout.tsx.

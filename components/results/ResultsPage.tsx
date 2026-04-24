@@ -10,7 +10,6 @@ import { ScenarioExplorer } from './ScenarioExplorer'
 import { PricingAnchor } from './PricingAnchor'
 import { PlanRecommendation } from './PlanRecommendation'
 import { CtaSection } from './CtaSection'
-import { Nav } from '@/components/Nav'
 import { useMemo } from 'react'
 
 export function ResultsPage() {
@@ -32,46 +31,52 @@ export function ResultsPage() {
   const elsFraction = results.MRV > 0 ? results.ELS / results.MRV : 0.3
 
   return (
-    <div className="min-h-screen bg-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6">
-        <Nav />
-      </div>
-
-      <ResultsHero
-        emrl={formatEur(results.EMRL)}
-        mrv={formatEur(results.MRV)}
-        els={formatEur(results.ELS)}
-        rd={formatEur(results.RD)}
-        rr={formatEur(results.RR)}
-        icc={formatEur(results.ICC)}
-        elsFraction={elsFraction}
-      />
+    <main className="min-h-screen bg-surface">
+      <section aria-label={t('resultsHero.eyebrow')}>
+        <ResultsHero
+          emrl={formatEur(results.EMRL)}
+          mrv={formatEur(results.MRV)}
+          els={formatEur(results.ELS)}
+          rd={formatEur(results.RD)}
+          rr={formatEur(results.RR)}
+          icc={formatEur(results.ICC)}
+          elsFraction={elsFraction}
+        />
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-12 space-y-4">
-        <KleverbillEstimate
-          eruv={formatRange(results.ERUVLow, results.ERUVHigh)}
-          els={formatEur(results.ELS)}
-          acb={formatEur(results.ACB)}
-        />
+        <section aria-label={t('kleverbillEstimate.eyebrow')}>
+          <KleverbillEstimate
+            eruv={formatRange(results.ERUVLow, results.ERUVHigh)}
+            els={formatEur(results.ELS)}
+            acb={formatEur(results.ACB)}
+          />
+        </section>
 
-        <ScenarioExplorer />
+        <section aria-label={t('scenarioExplorer.eyebrow')}>
+          <ScenarioExplorer />
+        </section>
 
-        <div className={roi !== null ? 'grid grid-cols-1 lg:grid-cols-2 gap-4' : undefined}>
-          {roi !== null && (
-            <PricingAnchor
-              roi={formatRoi(roi)}
-              plan={plan}
-            />
-          )}
-          <PlanRecommendation plan={plan} />
-        </div>
+        <section aria-label={t('planRecommendation.recommended', { tier: plan.tier })}>
+          <div className={roi !== null ? 'grid grid-cols-1 lg:grid-cols-2 gap-4' : undefined}>
+            {roi !== null && (
+              <PricingAnchor
+                roi={formatRoi(roi)}
+                plan={plan}
+              />
+            )}
+            <PlanRecommendation plan={plan} />
+          </div>
+        </section>
 
-        <CtaSection />
+        <section aria-label={t('ctaSection.eyebrow')}>
+          <CtaSection />
+        </section>
 
         <p className="text-[12px] text-on-surface-variant text-center leading-relaxed opacity-70 pt-4 pb-8">
           {t('resultsDisclaimer')}
         </p>
       </div>
-    </div>
+    </main>
   )
 }

@@ -2,13 +2,14 @@
 
 import { useTranslations } from 'next-intl'
 import { useCalculatorStore } from '@/lib/store'
-import { Nav } from '@/components/Nav'
 import { StepRevenue } from './StepRevenue'
 import { StepChasing } from './StepChasing'
 import { LivePreviewCard } from './LivePreviewCard'
 import { ProgressiveStep } from '@/components/ui/ProgressiveStep'
 import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
+import { FaqSection } from './FaqSection'
+import { MethodologySection } from './MethodologySection'
 
 export function CalculatorForm() {
   const t = useTranslations('calculatorForm')
@@ -43,10 +44,9 @@ export function CalculatorForm() {
   }
 
   return (
-    <div className="min-h-screen bg-surface">
+    <main className="min-h-screen bg-surface">
       {/* Hero */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6 pb-8 sm:pb-12">
-        <Nav />
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-8 sm:pt-20 pb-8 sm:pb-12">
         <p className="text-[11px] font-medium tracking-[0.10em] uppercase text-primary mb-4 sm:mb-5">
           {t('eyebrow')}
         </p>
@@ -98,6 +98,9 @@ export function CalculatorForm() {
           </div>
         </div>
       </div>
-    </div>
+
+      <MethodologySection />
+      <FaqSection />
+    </main>
   )
 }

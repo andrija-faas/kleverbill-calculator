@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Logo } from './Logo'
@@ -14,6 +14,7 @@ import { recommendPlan } from '@/lib/planTiers'
 
 export function Nav() {
   const t = useTranslations('nav')
+  const locale = useLocale()
   const formState = useCalculatorStore((s) => s.formState)
   const sliderState = useCalculatorStore((s) => s.sliderState)
   const results = calculate(formState, sliderState)
@@ -27,15 +28,12 @@ export function Nav() {
   }
 
   return (
-    <nav className="flex flex-wrap justify-between items-center mb-8 min-[815px]:mb-20 bg-white border border-[#E5E7EB] rounded-2xl px-4 py-3 min-[815px]:px-6 min-[815px]:py-4">
+    <nav className="flex flex-wrap justify-between items-center bg-white border border-[#E5E7EB] rounded-2xl px-4 py-3 min-[815px]:px-6 min-[815px]:py-4">
 
       {/* Brand — always visible, always left */}
-      <div className="flex items-center">
-        <span className="text-sm font-bold tracking-widest uppercase" style={{ color: '#1A2420' }}>
-          <span style={{ color: '#84C225' }}>Kleverbill</span>
-          {' '}{t('brand')}
-        </span>
-      </div>
+      <a href={`/${locale}/calculator`} className="flex items-center">
+        <img src="/logo.svg" alt="Kleverbill Rechner" className="h-7 w-auto" />
+      </a>
 
       {/* ── Desktop (815px+): CTA centred ── */}
       <button
