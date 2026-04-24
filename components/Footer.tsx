@@ -50,7 +50,7 @@ export function Footer() {
 
   return (
     <footer className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pb-6 sm:pb-8">
-      <div className="bg-white border border-[#E5E7EB] rounded-2xl p-12">
+      <div className="bg-white border border-[#E5E7EB] rounded-2xl p-12 max-[750px]:p-6">
 
         {/* Main row */}
         <div className="flex flex-wrap items-start justify-between gap-6">
@@ -61,7 +61,7 @@ export function Footer() {
           </a>
 
           {/* Centre — Kleverbill column */}
-          <nav aria-label="Footer navigation" className="hidden min-[815px]:flex flex-col">
+          <nav aria-label="Footer navigation" className="flex flex-col">
             <span className="text-[20px] leading-[28px] font-bold text-on-surface">{t('kleverbillHeading')}</span>
             <div className="flex flex-col gap-2 mt-5">
               <a href={`/${locale}/pricing`} className="text-[14px] leading-[24px] py-1 text-on-surface-variant hover:text-on-surface transition-colors">
@@ -97,7 +97,7 @@ export function Footer() {
               <p className="mt-1 text-[14px] leading-[22px] text-on-surface-variant">{t('newsletterDescription')}</p>
             </div>
             <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full sm:w-auto">
-              <div className="flex gap-2">
+              <div className="flex gap-2 max-[480px]:flex-col">
                 <input
                   type="email"
                   required
@@ -105,12 +105,12 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={t('newsletterPlaceholder')}
                   disabled={newsletterStatus === 'loading' || newsletterStatus === 'success'}
-                  className="flex-1 min-w-[220px] rounded-lg border border-[#E5E7EB] px-4 py-2.5 text-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-[#84C225] disabled:opacity-50"
+                  className="flex-1 min-w-[220px] max-[480px]:min-w-0 rounded-lg border border-[#E5E7EB] px-4 py-2.5 text-sm text-on-surface placeholder-on-surface-variant focus:outline-none focus:ring-2 focus:ring-[#84C225] disabled:opacity-50"
                 />
                 <button
                   type="submit"
                   disabled={newsletterStatus === 'loading' || newsletterStatus === 'success'}
-                  className="rounded-lg px-5 py-2.5 text-sm font-semibold text-white bg-[#84C225] hover:bg-[#72a81f] transition-colors disabled:opacity-60 whitespace-nowrap"
+                  className="rounded-lg px-5 py-2.5 text-sm font-semibold text-white bg-[#84C225] hover:bg-[#72a81f] transition-colors disabled:opacity-60 whitespace-nowrap max-[480px]:w-full"
                 >
                   {t('newsletterSubscribe')}
                 </button>
