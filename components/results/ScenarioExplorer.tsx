@@ -37,7 +37,7 @@ export function ScenarioExplorer() {
           <p className="text-[10px] font-medium tracking-[0.10em] uppercase text-primary mb-1">
             {t('eyebrow')}
           </p>
-          <p className="text-[17px] font-medium text-on-surface">{t('title')}</p>
+          <h2 className="text-[17px] font-medium text-on-surface">{t('title')}</h2>
         </div>
         <p className="text-[13px] text-on-surface-variant hidden sm:block">{t('liveUpdate')}</p>
       </div>

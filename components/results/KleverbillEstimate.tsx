@@ -22,9 +22,9 @@ export function KleverbillEstimate({ eruv, els, acb }: KleverbillEstimateProps) 
       <p className="text-[10px] font-medium tracking-[0.10em] uppercase text-primary mb-1">
         {t('eyebrow')}
       </p>
-      <p className="text-[17px] font-medium text-on-surface mb-5 sm:mb-6">
+      <h2 className="text-[17px] font-medium text-on-surface mb-5 sm:mb-6">
         {t('title')}
-      </p>
+      </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {tiles.map((tile) => (

@@ -3,7 +3,8 @@
     "title": "Kleverbill — Umsatz-Wiederherstellungsrechner",
     "description": "Erfahren Sie, wie viel unbezahlte Rechnungen Ihr Unternehmen jeden Monat kosten und wie viel Kleverbill zurückgewinnen kann.",
     "ogTitle": "Kleverbill Umsatz-Wiederherstellungsrechner",
-    "ogDescription": "Die meisten Unternehmen unterschätzen ihre Rechnungsverluste um das 2–3-Fache."
+    "ogDescription": "Die meisten Unternehmen unterschätzen ihre Rechnungsverluste um das 2–3-Fache.",
+    "keywords": "Forderungsrechner, unbezahlte Rechnungen Kosten, Zahlungsverzug Rechner, Debitorenbuchhaltung Rechner, Mahnwesen Software, Forderungsausfall Rechner, Cashflow Rechner, kleverbill"
   },
   "nav": {
     "brand": "Rechner",
@@ -135,6 +136,25 @@
     "bookAudit": "Kostenloses Recovery-Audit buchen",
     "recalculate": "Mit anderen Zahlen neu berechnen"
   },
+  "pricingPage": {
+    "metaTitle": "Kleverbill Preise — Tarife & Preise",
+    "metaDescription": "Einfache, transparente Preise für automatisiertes Forderungsmanagement. Ab €39/Monat. Vergleichen Sie Silver, Gold, Platinum und Enterprise.",
+    "metaKeywords": "kleverbill preise, forderungsmanagement software kosten, mahnwesen software preis, debitorenbuchhaltung automatisierung preis",
+    "eyebrow": "Preise",
+    "headlinePre": "Einfache, transparente",
+    "headlineStrong": "Preise",
+    "subline": "Wählen Sie den Plan, der zu Ihrem Rechnungsvolumen passt. Keine Einrichtungsgebühren, keine versteckten Kosten. Jederzeit kündbar.",
+    "mostPopular": "Beliebtester Plan",
+    "perMonth": "/Monat",
+    "customPricing": "Individuelle Preise",
+    "getStarted": "Jetzt starten",
+    "contactSales": "Vertrieb kontaktieren",
+    "ctaEyebrow": "Nicht sicher, welcher Plan passt?",
+    "ctaHeadlinePre": "Berechnen Sie Ihr",
+    "ctaHeadlineStrong": "Wiederherstellungspotenzial",
+    "ctaBody": "Geben Sie Ihr Rechnungsvolumen ein und sehen Sie genau, welchen Plan Kleverbill für Ihr Unternehmen empfiehlt.",
+    "ctaButton": "Rechner öffnen"
+  },
   "resultsDisclaimer": "Die Schätzungen basieren auf den von Ihnen angegebenen Informationen und Branchenannahmen. Ihr tatsächliches Wiederherstellungspotenzial hängt von der Rechnungsqualität, dem Zahlungsverhalten der Kunden und der Workflow-Einrichtung ab.",
   "plans": {
     "Silver": {
@@ -213,5 +233,114 @@
     "invoiceCountMode": {
       "required": "Rechnungsanzahl ist für diesen Modus erforderlich"
     }
+  },
+  "footer": {
+    "tagline": "Automatisiertes Forderungsmanagement für Unternehmen.",
+    "kleverbillHeading": "Kleverbill",
+    "pricing": "Preise",
+    "software": "Software",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "imprint": "Impressum",
+    "bookAudit": "Kostenloses Recovery-Audit buchen",
+    "copyright": "© 2025 Kleverbill",
+    "newsletterHeading": "Immer auf dem Laufenden",
+    "newsletterDescription": "Tipps zur Verbesserung Ihres Cashflows und zur Reduzierung von Forderungsausfällen – direkt in Ihr Postfach.",
+    "newsletterPlaceholder": "Ihre E-Mail-Adresse",
+    "newsletterSubscribe": "Anmelden",
+    "newsletterPrivacy": "Kein Spam. Jederzeit abmeldbar.",
+    "newsletterSuccess": "Erfolgreich angemeldet! Prüfen Sie Ihr Postfach.",
+    "newsletterError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "methodology": {
+    "eyebrow": "So funktioniert es",
+    "headlinePre": "Drei Kostentreiber,",
+    "headlineStrong": "eine klare Zahl",
+    "subline": "Der Rechner misst, was Zahlungsverzug, unbezahlte Rechnungen und manuelles Mahnen jeden Monat tatsächlich kosten — und wie viel davon wiederherstellbar ist.",
+    "stepsEyebrow": "Schritt für Schritt",
+    "metricsEyebrow": "Was die Ausgaben bedeuten",
+    "howToName": "So berechnen Sie Ihre Verluste durch unbezahlte Rechnungen mit Kleverbill",
+    "howToDescription": "Ein fünfstufiger Prozess zur Berechnung Ihrer monatlichen Gesamtbelastung durch verspätete und unbezahlte Rechnungen.",
+    "steps": [
+      {
+        "title": "Rechnungsvolumen eingeben",
+        "text": "Geben Sie Ihre monatliche Rechnungsanzahl und den durchschnittlichen Rechnungswert ein. Der Rechner ermittelt daraus Ihr monatliches Gesamtrechnungsvolumen."
+      },
+      {
+        "title": "Zahlungsraten festlegen",
+        "text": "Geben Sie den Anteil verspäteter Zahlungen und den Anteil dauerhaft unbezahlter Rechnungen ein — Ihre Zahlungsverzugsrate und Ausfallrate."
+      },
+      {
+        "title": "Mahnkosten hinzufügen",
+        "text": "Geben Sie an, wie viele Stunden Ihr Team monatlich mit dem Nachfassen von Zahlungen verbringt und was diese Stunden intern kosten."
+      },
+      {
+        "title": "Monatliche Belastung anzeigen",
+        "text": "Der Rechner kombiniert Verzugskosten (zu einem jährlichen Finanzierungssatz von 5 %), gefährdete Umsätze und Arbeitskosten zu einer einzigen monatlichen Gesamtbelastung."
+      },
+      {
+        "title": "Szenarien erkunden",
+        "text": "Passen Sie die Szenario-Regler an, um verschiedene Wiederherstellungsraten zu modellieren und zu sehen, wie viel Kleverbill für Ihre spezifische Situation zurückgewinnen könnte."
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Monatliche Belastung",
+        "abbr": "EMRL",
+        "text": "Ihre geschätzten monatlichen Forderungsausfälle insgesamt — die Summe aus Verzugskosten, gefährdeten Umsätzen und Mahnaufwand. Dies ist die zentrale Kennzahl des Rechners."
+      },
+      {
+        "label": "Wiedergewonnener Umsatz",
+        "abbr": "ERUV",
+        "text": "Geschätzter wiedergewinnbarer Ausfallbetrag mit Kleverbill, basierend auf Ihrer Ausfallrate und dem gewählten Wiederherstellungsszenario. Berechnet als gefährdeter Umsatz × Wiederherstellungsrate."
+      },
+      {
+        "label": "Einsparungen beim Mahnaufwand",
+        "abbr": "ELS",
+        "text": "Die eingesparte Arbeitszeit, wenn manuelles Mahnen automatisiert wird. Kleverbill eliminiert in der Regel rund 70 % des internen Mahnaufwands und entlastet Ihr Team für wertschöpfende Tätigkeiten."
+      },
+      {
+        "label": "Cashflow-Verbesserung",
+        "abbr": "ACB",
+        "text": "Der Wert schnellerer Zahlungseingänge bei verspäteten Zahlern. Kürzere Debitorenlaufzeiten verbessern Ihr Umlaufvermögen — noch bevor eine einzige Rechnung ausfällt."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "q": "Wie berechne ich, wie viel unbezahlte Rechnungen mein Unternehmen kosten?",
+        "a": "Multiplizieren Sie Ihr monatliches Rechnungsvolumen mit Ihrer Ausfallrate, um das gefährdete Umsatzvolumen zu ermitteln. Addieren Sie dann die Verluste durch Zahlungsverzug (monatliches Rechnungsvolumen × Zahlungsverzugsrate × Finanzierungskostenfaktor, in der Regel 5 %). Dazu kommt der Personalaufwand für das manuelle Mahnen (Stunden pro Monat × Stundensatz). Diese drei Größen – gefährdeter Umsatz, Verzugskosten und Mahnaufwand – ergeben zusammen Ihre monatliche Gesamtbelastung. Der Kleverbill-Rechner berechnet all das automatisch aus Ihren Eingaben."
+      },
+      {
+        "q": "Was ist eine Zahlungsverzugsrate?",
+        "a": "Die Zahlungsverzugsrate gibt an, wie viel Prozent Ihrer Rechnungen nach dem Fälligkeitsdatum, aber noch vor Ihrer letzten Mahnung bezahlt werden. Bei den meisten Unternehmen liegt dieser Wert zwischen 20 und 40 %. Auch wenn das Geld letztendlich eingeht, binden Zahlungsverzögerungen Liquidität – der Verzug selbst hat einen Kostenfaktor, der üblicherweise auf 5 % p. a. des verzögerten Betrags geschätzt wird."
+      },
+      {
+        "q": "Was ist eine Ausfallrate (Forderungsausfallrate)?",
+        "a": "Die Ausfallrate bezeichnet den Anteil der Rechnungen, die trotz letzter Mahnung unbezahlt bleiben – also effektiv Forderungsausfälle. Der Branchendurchschnitt liegt zwischen 2 und 8 %. Selbst eine Ausfallrate von 3 % bei einem monatlichen Rechnungsvolumen von 100.000 € bedeutet 3.000 € Verlust pro Monat – oder 36.000 € im Jahr."
+      },
+      {
+        "q": "Wie viel kostet das manuelle Mahnen von Rechnungen?",
+        "a": "Der Aufwand fürs manuelle Mahnen variiert stark, aber typische Unternehmen investieren 5 bis 15 Stunden pro Mitarbeiter und Monat in das Nachverfolgen offener Zahlungen. Bei einem durchschnittlichen Stundensatz von 35–50 € für Büropersonal in Europa ergibt das 175–750 € pro Person und Monat – rein für Personalkosten. Unternehmen mit hohem Rechnungsvolumen geben oft deutlich mehr aus, ohne es zu merken."
+      },
+      {
+        "q": "Was ist Kleverbill und wie werden unbezahlte Rechnungen zurückgewonnen?",
+        "a": "Kleverbill ist eine automatisierte Debitorenmanagement-Plattform, die Zahlungserinnerungen versendet, Mahnprozesse steuert und den Rechnungsstatus verfolgt – und damit das manuelle Mahnen durch automatisches, professionelles Follow-up ersetzt. Die Umsatzrückgewinnung erfolgt durch frühzeitigere und konsequentere Mahnungen (weniger Forderungsausfälle), schnellere Zahlungseingänge von säumigen Kunden und die Entlastung des Teams von manuellem Mahnaufwand."
+      },
+      {
+        "q": "Wie viel meiner unbezahlten Rechnungen kann realistisch zurückgewonnen werden?",
+        "a": "Die Rückgewinnungsquote hängt vom Rechnungsalter, der Kundenstruktur und der Schnelligkeit des Follow-ups ab. Mit automatisierter Frühintervention gelingt es Unternehmen typischerweise, 40–70 % der Rechnungen zurückzugewinnen, die sonst als Ausfall verbucht würden. Der Kleverbill-Rechner verwendet eine konservative Standard-Rückgewinnungsquote, die Sie im Szenario-Explorer anpassen können."
+      },
+      {
+        "q": "Welcher Kleverbill-Plan ist der richtige für mein Unternehmen?",
+        "a": "Die Wahl des richtigen Plans hängt von Ihrem monatlichen Rechnungsvolumen ab. Silver (39 €/Monat) deckt bis zu 25 Rechnungen/Monat ab. Gold (199 €/Monat) deckt bis zu 250 Rechnungen/Monat ab und bietet API-Integration und benutzerdefinierte Workflows – die beliebteste Wahl für wachsende Unternehmen. Platinum (449 €/Monat) unterstützt bis zu 1.000 Rechnungen/Monat mit ERP/CRM-Integration. Enterprise ist für unbegrenzte Volumina mit individueller Einrichtung. Der Rechner empfiehlt automatisch einen Plan auf Basis Ihrer Eingaben."
+      },
+      {
+        "q": "Ist der Umsatz-Wiederherstellungsrechner kostenlos?",
+        "a": "Ja – der Kleverbill Umsatz-Wiederherstellungsrechner ist vollständig kostenlos, erfordert kein Konto und zeigt Ergebnisse anonym an. Es werden keine Kontaktdaten erhoben, es sei denn, Sie entscheiden sich für die Buchung eines Recovery-Audits."
+      }
+    ]
   }
 }

@@ -3,7 +3,8 @@
     "title": "Kleverbill — Revenue Recovery Calculator",
     "description": "Find out how much money unpaid invoices are costing your business every month, and how much Kleverbill can recover.",
     "ogTitle": "Kleverbill Revenue Recovery Calculator",
-    "ogDescription": "Most companies underestimate their invoice losses by 2–3x."
+    "ogDescription": "Most companies underestimate their invoice losses by 2–3x.",
+    "keywords": "invoice recovery calculator, unpaid invoice cost, late payment calculator, accounts receivable calculator, dunning software, bad debt calculator, cash flow calculator, kleverbill"
   },
   "nav": {
     "brand": "Calculator",
@@ -135,6 +136,25 @@
     "bookAudit": "Book your free recovery audit",
     "recalculate": "Recalculate with different numbers"
   },
+  "pricingPage": {
+    "metaTitle": "Kleverbill Pricing — Plans & Pricing",
+    "metaDescription": "Simple, transparent pricing for automated invoice recovery. Start from €39/month. Compare Silver, Gold, Platinum, and Enterprise plans.",
+    "metaKeywords": "kleverbill pricing, invoice recovery software pricing, dunning software cost, accounts receivable automation price",
+    "eyebrow": "Pricing",
+    "headlinePre": "Simple, transparent",
+    "headlineStrong": "pricing",
+    "subline": "Choose the plan that fits your invoice volume. No setup fees, no hidden costs. Cancel anytime.",
+    "mostPopular": "Most Popular",
+    "perMonth": "/month",
+    "customPricing": "Custom pricing",
+    "getStarted": "Get started",
+    "contactSales": "Contact sales",
+    "ctaEyebrow": "Not sure which plan fits?",
+    "ctaHeadlinePre": "Calculate your",
+    "ctaHeadlineStrong": "recovery potential",
+    "ctaBody": "Enter your invoice volume and see exactly which plan Kleverbill recommends for your business.",
+    "ctaButton": "Open the calculator"
+  },
   "resultsDisclaimer": "Estimates are based on the information you provided and industry assumptions. Your actual recovery potential depends on invoice quality, customer payment behavior, and workflow setup.",
   "plans": {
     "Silver": {
@@ -213,5 +233,114 @@
     "invoiceCountMode": {
       "required": "Invoice count is required for this mode"
     }
+  },
+  "footer": {
+    "tagline": "Automated invoice recovery for businesses.",
+    "kleverbillHeading": "Kleverbill",
+    "pricing": "Pricing",
+    "software": "Software",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "imprint": "Imprint",
+    "bookAudit": "Book a Free Recovery Audit",
+    "copyright": "© 2025 Kleverbill",
+    "newsletterHeading": "Stay in the loop",
+    "newsletterDescription": "Get tips on improving cash flow and reducing invoice losses — straight to your inbox.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterSubscribe": "Subscribe",
+    "newsletterPrivacy": "No spam. Unsubscribe anytime.",
+    "newsletterSuccess": "You're in! Check your inbox.",
+    "newsletterError": "Something went wrong. Please try again."
+  },
+  "methodology": {
+    "eyebrow": "How it works",
+    "headlinePre": "Three cost drivers,",
+    "headlineStrong": "one clear number",
+    "subline": "The calculator measures what delayed payments, unpaid invoices, and manual chasing actually cost each month — then models how much of that is recoverable.",
+    "stepsEyebrow": "Step by step",
+    "metricsEyebrow": "What the outputs mean",
+    "howToName": "How to calculate unpaid invoice losses with Kleverbill",
+    "howToDescription": "A five-step process to calculate your total monthly exposure from late and unpaid invoices, then model your recovery potential.",
+    "steps": [
+      {
+        "title": "Enter your invoice volume",
+        "text": "Input your monthly invoice count and average invoice value. The calculator uses these to determine your total monthly invoiced amount."
+      },
+      {
+        "title": "Set your payment rates",
+        "text": "Enter the percentage of invoices paid late and the percentage that go permanently unpaid — your late payment rate and unpaid rate."
+      },
+      {
+        "title": "Add your chasing costs",
+        "text": "Enter how many hours your team spends on payment follow-up each month and what those hours cost internally."
+      },
+      {
+        "title": "See your monthly exposure",
+        "text": "The calculator combines delay costs (at a 5% annual financing rate), revenue at risk, and labour costs into a single monthly exposure figure."
+      },
+      {
+        "title": "Explore recovery scenarios",
+        "text": "Adjust the scenario sliders to model different recovery rates and see how much Kleverbill could recover for your specific situation."
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Monthly Exposure",
+        "abbr": "EMRL",
+        "text": "Your total estimated monthly receivables lost — the sum of delay costs, revenue at risk, and chasing labour. This is the headline number the calculator is built around."
+      },
+      {
+        "label": "Recovered Revenue",
+        "abbr": "ERUV",
+        "text": "Estimated unpaid value recoverable with Kleverbill, based on your unpaid rate and the chosen recovery scenario. Calculated as revenue at risk × recovery rate."
+      },
+      {
+        "label": "Labour Savings",
+        "abbr": "ELS",
+        "text": "The staff time saved when manual chasing is automated. Kleverbill typically eliminates around 70% of internal chasing effort, freeing your team for higher-value work."
+      },
+      {
+        "label": "Cash Flow Benefit",
+        "abbr": "ACB",
+        "text": "The value of receiving late payments sooner. Accelerating late payers reduces your average debtor days and improves working capital — even before a single invoice goes unpaid."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How do I calculate how much unpaid invoices are costing my business?",
+        "a": "Multiply your monthly invoiced amount by your unpaid rate to find revenue at risk, then add your late payment losses (monthly invoiced amount × late payment rate × a financing cost factor, typically 5%). On top of that, calculate the staff time spent chasing payments (hours per month × hourly cost). Together, these three figures — revenue at risk, delay cost, and chasing cost — make up your total monthly exposure. The Kleverbill calculator does this automatically from your inputs."
+      },
+      {
+        "q": "What is a late payment rate?",
+        "a": "The late payment rate is the percentage of your invoices that are paid after the due date but before your final reminder. For most businesses this is between 20% and 40%. Late payments tie up cash flow even when the money eventually arrives — the delay itself has a cost, typically estimated at 5% annually of the delayed amount."
+      },
+      {
+        "q": "What is an unpaid rate (bad debt rate)?",
+        "a": "The unpaid rate is the percentage of invoices that remain unpaid even after your final reminder — effectively bad debt. Industry averages range from 2% to 8%. Even a 3% unpaid rate on €100,000 monthly invoicing means €3,000 written off every month, or €36,000 per year."
+      },
+      {
+        "q": "How much does manual invoice chasing cost a business?",
+        "a": "Manual chasing costs vary widely, but a typical business spends 5–15 hours per month per team member on payment follow-up. At an average European office worker cost of €35–50/hour, that is €175–750 per person per month — purely in labour. Businesses with high invoice volumes often spend significantly more without realising it."
+      },
+      {
+        "q": "What is Kleverbill and how does it recover unpaid invoices?",
+        "a": "Kleverbill is an automated accounts receivable platform that sends payment reminders, manages dunning workflows, and tracks invoice status — replacing manual chasing with automated, professional follow-up. It recovers revenue by reducing bad debt (through earlier, more consistent reminders), accelerating cash flow from late payers, and freeing staff time previously spent on manual follow-up."
+      },
+      {
+        "q": "How much of my unpaid invoices can realistically be recovered?",
+        "a": "Recovery rates depend on invoice age, customer type, and how quickly follow-up begins. With automated early intervention, businesses typically recover 40–70% of invoices that would otherwise go unpaid. The Kleverbill calculator uses a conservative default recovery rate that you can adjust in the scenario explorer."
+      },
+      {
+        "q": "Which Kleverbill plan is right for my business?",
+        "a": "The right plan depends on your monthly invoice volume. Silver (€39/mo) covers up to 25 invoices/month. Gold (€199/mo) covers up to 250 invoices/month and adds API integration and custom workflows — the most popular choice for growing businesses. Platinum (€449/mo) supports up to 1,000 invoices/month with ERP/CRM integration. Enterprise is for unlimited volume with custom setup. The calculator recommends a plan based on your inputs."
+      },
+      {
+        "q": "Is the Revenue Recovery Calculator free to use?",
+        "a": "Yes — the Kleverbill Revenue Recovery Calculator is completely free, requires no account, and shows results anonymously. No contact details are collected unless you choose to book a recovery audit."
+      }
+    ]
   }
 }

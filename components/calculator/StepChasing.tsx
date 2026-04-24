@@ -25,7 +25,7 @@ export function StepChasing() {
     <Card>
       <div className="flex items-baseline gap-3 mb-5">
         <span className="text-[11px] font-semibold tracking-[0.12em] text-primary/60 tabular-nums">02</span>
-        <p className="text-[17px] font-medium text-on-surface">{t('title')}</p>
+        <h2 className="text-[17px] font-medium text-on-surface">{t('title')}</h2>
       </div>
 
       <ToggleGroup
