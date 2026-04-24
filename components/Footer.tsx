@@ -38,9 +38,12 @@ export function Footer() {
     if (!email) return
     setNewsletterStatus('loading')
     try {
-      // TODO: integrate Lemlist API
-      // await fetch('/api/newsletter', { method: 'POST', body: JSON.stringify({ email }) })
-      await new Promise((r) => setTimeout(r, 600)) // placeholder
+      const res = await fetch('https://lemlist-bridge.vercel.app/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) throw new Error('Failed')
       setNewsletterStatus('success')
       setEmail('')
     } catch {
