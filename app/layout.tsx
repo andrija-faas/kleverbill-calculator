@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { getLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
@@ -18,7 +19,16 @@ export default async function RootLayout({
   const locale = await getLocale()
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1KE7NZ75BV"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1KE7NZ75BV');`}
+        </Script>
+        {children}
+      </body>
     </html>
   )
 }
